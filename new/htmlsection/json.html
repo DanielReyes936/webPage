@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style/json.css">
+</head>
+<body>
+
+
+    <script src="/javascript/json-page.js"></script>
+   <header>
+        <a href="/index.html" id="back-button">Back to Home</a>
+        <div id="logo">
+            <a href='/'><img id="js-logo" src="/Image/imagen.png" width="300" height="300"></a>
+        </div>
+   </header>
+
+   <div id="menuoption">
+    <nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li><a class='dropdown-arrow'>Topics</a>
+        <ul class='sub-menus'>
+          <li><a href='/'>Mobile Web</a></li>
+          <li><a href="/htmlsection/javascrip.html">JavaScript</a></li>
+          <li><a href="/htmlsection/jselector.html">JSelector</a></li>
+           <li><a href='/'>Ajax 3</a></li>
+        
+        </ul>
+      </li>
+      <li><a href='http://'>About</a></li>
+          <li><a href='http://'>Contact Us</a></li>
+    </ul>
+  </nav>
+  </div>
+    
+   <h1 id="title">JSON</h1>
+
+   <div id="lateralmenu" >
+    <a href="#js-data" class="button">Introduction</a>
+    <a href="#js-advantages" class="button">Advantages</a>
+    <a href="#js-disadvantages" class="button">Disadvantages</a>
+    <a href="#js-usages" class="button">Usages</a>
+    <a href="#js-keywords" class="button">Program Example</a>
+  </div>
+        
+<div id="infojavascript">
+   <hr>
+
+   <div id="js-data">
+        <h4>What is JSON?</h4>
+        <p id="data-body">
+            <b>JSON</b> stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation is an <b>open standard file format</b> and <b>data interchange </b>format that uses <b>human-readable</b> text to store
+             and transmit data objects consisting of <b>attribute–value pairs</b> and <b>arrays</b> (or other serializable values).
+             It is a common data format with diverse uses in <b>electronic data interchange</b>, including that of <b>web applications</b> with <b>servers</b>.
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-advantages">
+    <h4>Advantages of JSON</h4>
+    <p id="adv-body">
+        One of the most significant advantages of using JSON is that the <b>file size is smaller</b>; thus, transferring data is faster than XML. Moreover, 
+        since JSON is compact and very easy to read, the files look cleaner and more organized without empty tags and data. 
+        <b>The simplicity of its structure and minimal syntax makes JSON easier to be used and read by humans</b>.
+    </p>
+    </div>
+
+    <hr>  
+
+    <div id="js-disadvantages">
+        <h4>Disadvantages of JSON</h4>
+        <p id="dis-body">
+             JSON includes data types such as string, number, object, array, boolean, and null. But it <b>skips the date data type</b>.
+             The lack of the date data type in JSON forces developers to look for an alternative.<br>
+             The comments are essential in understanding the code. You can use comments in JSON but with limitations. This is to say, 
+             you’ll have a hard time clarifying the data in the data itself. Also, <b>comments are not allowed by some JSON libraries as inputs</b>.<br>
+             Even though the majority of internet browsers provide native JSON support, there are still some that don’t. When faced with such a situation, 
+             the eval() function is used. It parses JSON into JavaScript objects. But there is a possibility that using <b>this function can make your application less secure</b>.
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-usages">
+    <h4>Usage of JSON</h4>
+    <p id="use-body">
+        JSON can be used when using <b>JavaScript application</b> that include <b>browser extenstions</b>
+        and <b>websites.</b> The JSON format is used for <b>serializing and transmitting structured data</b>
+        over network connection (i.e. server to web page). <br>
+        
+    </p>
+    </div>
+
+    <hr>
+
+   <div id="js-keywords">
+       <h4>Example for Reading a JSON file</h4>
+       <p id="keywords-body">
+           When reading a JSON file with Javascript and HTML, we first need to <b>fetch</b> the 
+           information or file that we wish to obtain the information from. 
+       </p>
+        
+        <p id="keywords-body-example">
+            <b>Example for retrieving authors:</b><br>
+            <br>
+            In this example, we are using a json file with three entries, each containing information
+            about books. <br>
+            <br>
+            <code>
+                [	<br>
+                    { 
+                        "id":"01",<br>
+                        "name":"java",<br>
+                        "author":"Smith"
+                    },<br>
+                    {
+                        "id":"02",<br>
+                        "name":"C++",<br>
+                        "author":"Hong"
+                    },<br>
+                    {
+                        "id":"03",<br>
+                        "name":"C#",<br>
+                        "author":"Gomez"
+                    }<br>
+                ]<br>
+            </code>
+            <br>
+            Using the code shown below, we can retrieve specific information from this file 
+            like the <b>authors</b> of the books. 
+            <br>
+            <br>
+            
+            <code>
+                var out=document.getElementById("key-result");<br>
+                var info="";<br>
+                fetch('./data.json')<br>
+                .then(response=>response.json())<br>
+                .then(data=>{<br>
+                    for(let x of data)<br>
+                    {<br>
+                        info+=+x.author;<br>
+                    }<br>
+                    <br>
+                    out.innerHTML+=info; 
+                    <br>
+                });
+            </code>
+            <br>
+            <button onclick="getAuthorNames()">Retrieve information!</button>
+        </p>
+        <p id="keywords-body-example">
+            <div id="list-container">
+                <ul id="key-result">
+
+                </ul>
+            </div>
+        </p>
+
+        <hr>
+ 
+        <p id="keywords-body-example">
+            <b>Example for retrieving book names:</b><br>
+            <br>
+            We can also change the code in our JavaScript file, or add another function that
+            will retrieve different information from the same data file. <br>
+            <br>
+            <code>
+                [	<br>
+                    { 
+                        "id":"01",<br>
+                        "name":"java",<br>
+                        "author":"Smith"
+                    },<br>
+                    {
+                        "id":"02",<br>
+                        "name":"C++",<br>
+                        "author":"Hong"
+                    },<br>
+                    {
+                        "id":"03",<br>
+                        "name":"C#",<br>
+                        "author":"Gomez"
+                    }<br>
+                ]<br>
+            </code>
+            <br>
+            The code below will allow us to retrieve the data from the file that will show the <b>names of the books.</b> 
+            <br>
+            <br>
+            
+            <code>
+                var out=document.getElementById("key-result2");<br>
+                var info="";<br>
+                fetch('./data.json')<br>
+                .then(response=>response.json())<br>
+                .then(data=>{<br>
+                    for(let x of data)<br>
+                    {<br>
+                        info+=+x.name;<br>
+                    }<br>
+                    <br>
+                    out.innerHTML+=info; 
+                    <br>
+                });
+            </code>
+            <br>
+            <button onclick="getBookNames()">Retrieve information!</button>
+        </p>
+        <p id="keywords-body-example">
+            <div id="list-container">
+                <ul id="key-result2">
+
+                </ul>
+            </div>
+        </p>
+   </div>
+
+   <hr>
+
+   <div class="Date">
+    <b>Example using a web JSON file that gives us the date and time when pressing the Date button.</b>
+    <br>
+    <br>
+    In this example, we are retrieving the data from a JSON file that is not in the project file.
+    The data we are retrieving in this case comes from a website, which we can fetch in our function.
+    <br>
+    <br>
+    <code>
+        var output = document.getElementById("out");<br>
+        var info ="";<br>
+        fetch("http://time.jsontest.com/")<br>
+        .then(response =>response.json())<br>
+        .then(data=>{<br>
+            info+="Date: data.date";<br>
+            info+="Milliseconds: data.milliseconds_since_epoch"</li>";<br>
+            info+="Time: data.time"</li>";<br>
+            output.innerHTML=info;<br>
+        });<br>
+    </code>
+
+    <ul id="out"></ul>
+<button onclick="readDate()">Date</button>
+
+
+
+   </div>
+   
+</body>
+</html>

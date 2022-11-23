@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style/javascript.css">
+</head>
+<body>
+
+
+    <script src="/javascript/js-page.js"></script>
+   <header>
+        <a href="/index.html" id="back-button">Back to Home</a>
+        <div id="logo">
+            <a href='/'><img id="js-logo" src="/Image/imagen.png" width="300" height="300"></a>
+        </div>
+   </header>
+
+   <div id="menuoption">
+    <nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li><a class='dropdown-arrow'>Topics</a>
+        <ul class='sub-menus'>
+          <li><a href='/'>Mobile Web</a></li>
+          <li><a href="/htmlsection/jselector.html">JSelector</a></li>
+          <li><a href='/htmlsection/json.html'>JSON</a></li>
+          <li><a href='/'>Ajax 3</a></li>
+        
+        </ul>
+      </li>
+      <li><a href='http://'>About</a></li>
+          <li><a href='http://'>Contact Us</a></li>
+    </ul>
+  </nav>
+  </div>
+    
+   <h1 id="title">JavaScript</h1>
+
+   <div id="lateralmenu" >
+    <a href="#js-data" class="button">Introduction</a>
+    <a href="#js-advantages" class="button">Advantages</a>
+    <a href="#js-disadvantages" class="button">Disadvantages</a>
+    <a href="#js-usages" class="button">Usages</a>
+    <a href="#js-keywords" class="button">Program Example</a>
+  </div>
+        
+<div id="infojavascript">
+   <hr>
+
+   <div id="js-data">
+        <h4>What is JavaScript?</h4>
+        <p id="data-body">
+            JavaScript is a scripting language used for web applications embedded in HTML pages.
+            In JavaScript, the code is <b>interpreted</b> instead of compiled.
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-advantages">
+    <h4>Advantages of JavaScript</h4>
+    <p id="adv-body">
+        JavaScript is made to be <b>simple and easily comprehendable</b> to be picked up by the developers and users.
+        Being able to create <b>dynamic content with little to no cost</b> is also an advantage of JavaScript, 
+        since it can also be <b>integrated with other programming languages.</b>
+        JavaScript is also advantageous to use since it <b>cuts down the time necessary for compilation</b>, since it is an interpreted language. 
+    </p>
+    </div>
+
+    <hr>  
+
+    <div id="js-disadvantages">
+        <h4>Disadvantages of JavaScript</h4>
+        <p id="dis-body">
+            Although JavaScript is an advantageous programming language that 
+            can easily be picked up by beginner developers, it is also important to note 
+            that there are several disadvantages to using JavaScript. When using JavaScript, it will be 
+            <b>difficult to debug</b>, and it will also be difficult and <b>tedious to figure out the issue</b> since 
+            the browser doesn't display the errors in the code like the console for other programming languages. 
+            Because of this, a single error in the code can make the whole page stop rendering on the browser. <br>
+            <br>
+            Lastly, <b>using JavaScript doesn't guarantee security</b> since the code is easily seen by users on the browser.
+            Given its simple nature, it also makes it <b>simple for anyone to alter or insert codes</b> that will result 
+            in the security being compromised. 
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-usages">
+    <h4>Usage of JavaScript</h4>
+    <p id="use-body">
+        Although JavaScript is an advantageous programming language that 
+        can easily be picked up by beginner developers, it is also important to note 
+        that there are several disadvantages to using JavaScript. When using JavaScript, it will be 
+        <b>difficult to debug</b>, and it will also be difficult and <b>tedious to figure out the issue</b> since 
+        the browser doesn't display the errors in the code like the console for other programming languages. 
+        Because of this, a single error in the code can make the whole page stop rendering on the browser. <br>
+        <br>
+        Lastly, <b>using JavaScript doesn't guarantee security</b> since the code is easily seen by users on the browser.
+        Given its simple nature, it also makes it <b>simple for anyone to alter or insert codes</b> that will result 
+        in the security being compromised. 
+    </p>
+    </div>
+
+    <hr>
+
+   <div id="js-keywords">
+       <h4>Common Keywords in JavaScript</h4>
+       <p id="keywords-body">The <b>var</b> Keyword is used in JavaScript to declare variables that are <i>function-scoped</i>.
+        Meanwhile, the similar <b>let</b> Keyword, is used for creating variables at <i>block-level</i></p>
+        
+        <p id="keywords-body-example">
+            <b>Example for var:</b><br>
+            <code>
+                for(var x = 0; x < 3; x++) { 
+                    //code 
+                }; 
+                console.log(x);
+            </code>
+            <button onclick="showVarResult()">See result!</button>
+        </p>
+
+        <p id="keywords-body-example">
+            <b>Example for let:</b><br>
+            <code>
+                for(let x = 0; x < 3; x++) { 
+                    //code 
+                }; 
+                console.log(x);
+            </code>
+            <button onclick="showLetResult()">See result!</button>
+        </p>
+        <p id="keywords-body-example">
+            <textarea id="key-result" cols="30" rows="5"></textarea>
+            <br>
+            <button onclick="clearBox()">Clear Box</button>
+        </p>
+ 
+   </div>
+
+   <hr>
+
+  
+</body>
+</html>

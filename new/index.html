@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MobileApplicationDevelopment</title>
+    <link rel="stylesheet" href="/Style/main.css" />
+  </head>
+  <body>
+    <script src="/javascript/menubar.js"></script>
+    <script src="/javascript/main-page.js"></script>
+
+    <!--This section is a logo an name web page-->
+    <div id="logo">
+      <a href="/"><img src="/Image/imagen.png" width="300" height="300" /></a>
+    </div>
+    <div id="name">
+      <h1>Mobile Application Development</h1>
+    </div>
+
+    <!--This is a menu principal-->
+    <div id="menuoption">
+      <nav id="menu">
+        <input
+          type="checkbox"
+          id="responsive-menu"
+          onclick="updatemenu()"
+        /><label></label>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a class="dropdown-arrow">Topics</a>
+            <ul class="sub-menus">
+              <li><a href="/htmlsection/javascrip.html">JavaScript</a></li>
+              <li><a href="/htmlsection/jselector.html">JSelector</a></li>
+              <li><a href="/htmlsection/json.html">JSON</a></li>
+              <li><a href="/">Ajax 3</a></li>
+            </ul>
+          </li>
+          <li><a href="http://">About</a></li>
+          <li><a href="http://">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Title page-->
+    <div id="programtitle">
+      <h1>Mobile Web</h1>
+    </div>
+
+    <div id="container"></div> <!-- Separate title with lateral menu and content-->
+    
+    <!--Lateral menu with button design-->
+    <div id="lateralmenu">
+      <button class="button" onclick="Introduction()">Introduction</button>
+      <button class="button" onclick="Advantages()">Advantages</button>
+      <button class="button" onclick="Disadvantages()">
+        Disadvantages
+      </button>
+      <button class="button" onclick="Usages()">Usages</button>
+    </div>
+
+    <!--information regarding Web Mobile -->
+    <!--This information is modified with javascript through functions.-->
+    <div id="text">
+      <h2 id="contentTitle">Introduction</h2>
+      <p id="contentText">
+        Traditionally, the World Wide Web has been accessed via fixed-line
+        services on laptops and desktop computers. However, the web is now more
+        accessible by portable and wireless devices. Early 2010 ITU
+        (International Telecommunication Union) report said that with current
+        growth rates, web access by people on the go via laptops and smart
+        mobile devices was likely to exceed web access from desktop computers
+        within the following five years
+      </p>
+    </div>
+
+    <!--Copyright section-->
+    <div id="copyright">
+      <p>&copy; 2022 Mobile Application by Reyes & Pineda</p>
+    </div>
+  </body>
+</html>

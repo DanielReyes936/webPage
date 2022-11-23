@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style/jselector.css">
+</head>
+<body>
+
+
+    <script src="/javascript/selector-page.js"></script>
+   <header>
+        <a href="/index.html" id="back-button">Back to Home</a>
+        <div id="logo">
+            <a href='/'><img id="js-logo" src="/Image/imagen.png" width="300" height="300"></a>
+        </div>
+   </header>
+
+   <div id="menuoption">
+    <nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li><a class='dropdown-arrow'>Topics</a>
+        <ul class='sub-menus'>
+        <li><a href="/htmlsection/javascrip.html">JavaScript</a></li>
+          <li><a href='/'>Mobile Web</a></li>
+          <li><a href='/htmlsection/json.html'>JSON</a></li>
+          <li><a href='/'>Ajax 3</a></li>
+        
+        </ul>
+      </li>
+      <li><a href='http://'>About</a></li>
+          <li><a href='http://'>Contact Us</a></li>
+    </ul>
+  </nav>
+  </div>
+    
+   <h1 id="title">JSelectors</h1>
+
+   <div id="lateralmenu" >
+    <a href="#js-data" class="button">Introduction</a>
+    <a href="#js-advantages" class="button">Advantages</a>
+    <a href="#js-disadvantages" class="button">Disadvantages</a>
+    <a href="#js-usages" class="button">Usages</a>
+    <a href="#js-select" class="button">Program Example</a>
+  </div>
+        
+<div id="infojavascript">
+   <hr>
+
+   <div id="js-data">
+        <h4>JavaScript Selectors</h4>
+        <p id="data-body">
+            JavaScript Selectors are used to <b>select</b> HTML elements using their id name, 
+            class name, tag name, type, or even attributes to make it easier for the developer to
+            manipulate the HTML element or even alter its CSS. 
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-advantages">
+    <h4>Advantages of JavaScript Selectors</h4>
+    <p id="adv-body">
+        Using JavaScript Selectors are beneficial sicne they are <b>reusable and can be utilized multiple times.</b>
+        It also makes it easier for the developer to <b>pinpoint the elements</b>> that they want to apply changes to. 
+        This makes using JavaScript easier since there are several ways in which selectors can be used to specify the 
+        elements that the developer wants to alter.
+    </p>
+    </div>
+
+    <hr>  
+
+    <div id="js-disadvantages">
+        <h4>Disadvantages of JavaScript Selectors</h4>
+        <p id="dis-body">
+            For JavaScript Selectors, the pros definitely outweigh the cons. There is a lot of things that 
+            can be done with JS Selectors, and the only major disadvantage it has is there is no clear way of 
+            <b>debugging</b> or figuring out where the error might be if a typo has occurred while typing out the id 
+            or tag name of the element that is selected. 
+        </p>
+   </div>
+   
+   <hr>
+
+   <div id="js-usages">
+    <h4>DOM Selectors</h4>
+    <p id="use-body">
+        The most common selectors that is used in JavaScript are the Document Object Model or DOM Selectors. These
+        selectors are self-explanatory, and select elements within a document with the use of JavaScript. There are 5 ways in 
+        which you can select the elements you want to alter in a DOM through selectors. Namely, these five ways are: 
+    </p>
+        <div id="list-container">
+        <ul id="dom-list">
+            <li>getElementsByTagName()</li>
+            <li>getElementsByClassName()</li>
+            <li>getElementById()</li>
+            <li>querySelector()</li>
+            <li>querySelectorAll()</li>
+        </ul>
+        </div>
+
+    <p id="use-body">
+        <b><u>document.getElementsByTagName()</u></b><br>
+        <br>
+        Using this method, we can select the elements that match a specific <i>tag name</i>. Tag names 
+        can be the type of element, such as 'h1', 'li', 'p', etc. Using this selects all the elements of that
+        tag name, allowing changes to be made to all the elements that fall under this umbrella. 
+    </p>
+
+    <p id="use-body">
+        <b><u>document.getElementsByClassName()</u></b><br>
+        <br>
+        Similar to the previous selector, this method selects more specific elements, considering the <i>class name</i> 
+        of the element rather than the more general tag name. This allows the developer to apply different 
+        changes to elements of the same tag name, by specifying different class names for these elements.
+    </p>
+
+    <p id="use-body">
+        <b><u>document.getElementbyId()</u></b><br>
+        <br>
+        Another selector that allows for a more specific return of elements is this selector, which utilizes the <i>id name</i>
+        of the element rather than the general tag name, or its class name. Once again, this adds a new level of specificity
+        to JS Selectors that developers can use when changes are to be applied only to specific elements in the document. 
+        <br><br>
+        Another unique thing about this selector, is that it only returns the <b>first matched element</b> in the document,
+        ignoring the following elements that may be using the same ID.
+    </p>
+
+    <p id="use-body">
+        <b><u>document.querySelector()</u></b><br>
+        <br>
+        When the querySelector() method it used, it returns <i>only the first element in the document</i> that matches the selector 
+        used by the developer. Unlike the three previous selector methods, this one can utilize the <i>tag, class, or id name</i> of 
+        an element. 
+        <br><br>
+        Writing the tag names require no other characters. Meanwhile, adding a '.' before the selector specified
+        will let the selector know that you are asking it to search through the class names of the elements. Similarly, using 
+        a '#' before the selector specified will make it search through the id names. 
+    </p>
+
+    <p id="use-body">
+        <b><u>document.querySelectorAll()</u></b><br>
+        <br>
+        Unlike the previous selector that only returns the first element that matches, this selector method will
+        return <i>all the elements matching the specifications provided by the developer.</i>
+        The same logic applies, where tag names require no special characters, class names require a '.' beforehand, and 
+        id names require a '#'.
+    </p>
+
+    <div id="list-container">
+        <ul id="dom-list">
+            <li>document.querySelector('h1')  -> returns first element that matches tag names</li>
+            <li>document.querySelectorAll('.heading')  -> returns first element that matches class names</li>
+            <li>document.querySelector('#item')  -> returns first element that matches id names</li>
+            <li>document.querySelectorAll('h1')  -> returns all that matches tag names</li>
+            <li>document.querySelectorAll('.heading')  -> returns all that matches class names</li>
+            <li>document.querySelectorAll('#item')  -> returns all that matches id names</li>
+        </ul>
+    </div>
+
+
+    </div>
+
+    <hr>
+
+
+   <div id="js-select">
+       <h4><u>Selectors in JavaScript</u></h4>
+       
+       <p id="select-body">
+           The <b>document.getElementsByTagName</b> returns an array of elements of your choice. 
+           Using selectors, you can use this to simultaneously apply changes to elements of a certain
+           tag name. 
+       </p>
+
+       <p id="select-body-example">
+           <b>Example for 'getElementsByTagName':</b><br>
+           <i>Here, the h3 text will shift to the right side of the page.</i> <br>
+           <br>
+           <code>
+               var text = document.getElementsByTagName("h5");
+                <br>
+                for(let i = 0; i < text.length; i++)
+                {text[i].style.textAlign="right";}
+           </code> 
+       </p>
+       <p id="select-body-example">
+        <button onclick="selectExample1()">See result!</button><br>
+        <button onclick="example1Reset()">Reset</button><br>
+        <h3>JavaScript</h3>
+        <h3>is</h3>
+        <h3>Fun</h3>
+        <br>
+        
+    </p>
+
+    <hr>
+
+    <p id="select-body">
+        In this example, we will use the <b>document.querySelector</b> statement to 
+        select an element an, we will also use the <b>document.querySelectorAll</b> statement to 
+        select All elements. . 
+    </p>
+    <p id="select-body-example">
+        <b>Example for 'querySelector':</b><br>
+        <i>Here, we will change the CSS of the text, changing the color from black to blue.<br> 
+            The function only changes one element of the formed array.</i><br>
+        <br>
+        <code>
+            var text = document.querySelector('h2');
+            <br>
+            text.style.color="blue";}
+        </code>
+    </p>
+    <p id="select-body-example">
+        <button onclick="selectExample2B()">See result!</button><br>
+        <button onclick="example2Reset()">Reset</button><br>
+        <h2>JavaScript</h2>
+        <h2>JavaScript</h2>
+        <h2>JavaScript</h2>
+        <h2>JavaScript</h2>
+    </p>
+
+<br>
+    
+
+    <p id="select-body">
+        Using the <b>for</b> keyword, we can also shorten the JS code necessary for shifting through
+        the array of elements.
+        In this example, we will also use the <b>document.querySelectorAll</b> statement to 
+        select the elements. 
+    </p>
+    <p id="select-body-example">
+        <b>Example for 'querySelectorAll' and 'for' keyword:</b><br>
+        <i>Here, we will change the CSS of the text, changing the color from black to red.</i><br>
+        <br>
+        <code>
+            var text = document.querySelectorAll('h2');
+            <br>
+            for(x of text)
+            {x.style.color="red";}
+        </code>
+    </p>
+    <p id="select-body-example">
+        <button onclick="selectExample2()">See result!</button><br>
+        <button onclick="example2Reset()">Reset</button><br>
+        <h2>JavaScript</h2>
+    </p>
+    
+    <hr>
+
+    <p id="select-body-example">
+        We can also change the font style, and other CSS styles made, using JavaScript.
+    </p>
+    <p id="select-body-example">
+        <b>More examples for changing the CSS of elements with JavaScript.</b><br>
+        <i>Select the button of the change you would like to see!</i><br>
+    </p>
+
+    <p id="select-body-example" >
+        <ul id="sample-list">
+            <li><button onclick="selectExample3A()">Make the text orange</button></li>
+            <li><button onclick="selectExample3B()">Change the font of the text</button></li>
+            <li><button onclick="selectExample3C()">Italicize the text</button></li>
+        </ul>
+    </p>
+    
+    <p id="select-body-example">
+        <h1 id="sample-3">JavaScript</h1>
+        <button onclick="example3Reset()">Reset</button>
+       
+    </p>
+    
+    <p id="select-body-example">
+        <i>JavaScriptCode for Option 1:</i><br>
+        <code>
+            var text = document.getElementById("sample-3"); <br>
+            text.style.color="orange";
+        </code>
+    </p>
+    <p id="select-body-example">
+        <i>JavaScript Code for Option 2:</i><br>
+        <code>
+            var text = document.getElementById("sample-3"); <br>
+            text.style.fontFamily="TimesNewRoman";
+        </code>
+    </p>
+    <p id="select-body-example">
+        <i>JavaScript Code for Option 3:</i><br>
+        <code>
+            var text = document.getElementById("sample-3"); <br>
+            text.style.fontStyle="italic";
+        </code>
+    </p>
+
+    <hr>
+
+    
+    </div>
+
+    <h6>&copy; 2022 Mobile Application by Reyes & Pineda</h6>
+   </div>
+
+
+</body>
+</html>
